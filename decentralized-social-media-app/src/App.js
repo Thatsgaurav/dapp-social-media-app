@@ -12,7 +12,9 @@ import { Box, Button, Image } from "@chakra-ui/react";
 function App() {
   const [account, setAccount] = useState(null);
   const [profiles, setProfiles] = useState([]);
+  console.log("~ profiles", profiles);
   const [posts, setPosts] = useState([]);
+  console.log("~ posts", posts);
 
   async function signIn() {
     const accounts = await window.ethereum.request({
@@ -98,3 +100,5 @@ function App() {
 }
 
 export default App;
+
+// https://youtu.be/FiZIGm41dgE?t=1414
